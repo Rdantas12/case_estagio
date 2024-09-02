@@ -35,7 +35,7 @@ def analise_faturamento(excel):
     menor_valor = df['valor'].min()
     maior_valor = df['valor'].max()
     media_valor = df['valor'].mean()
-    dias_acima_medio = (df['valor'] > media).sum()
+    dias_acima_medio = (df['valor'] > media_valor).sum()
     resultados = pd.DataFrame({'Estatística':['Menor valor', 'Maior valor', 'Dais acima da média'], 
                                 'Valor':[menor_valor, maior_valor, dias_acima_medio]})
     
